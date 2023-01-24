@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 
 /// Default days of the week
 const List<String> _DaysOfTheWeek = [
-  'Sun',
-  'Mon',
-  'Tue',
-  'Wed',
-  'Thu',
-  'Fry',
-  'Sat'
+  'Pzr',
+  'Pzrt',
+  'Sal',
+  'Çar',
+  'Per',
+  'Cuma',
+  'Cmt'
 ];
 
 /// Show the row of text from [_DaysOfTheWeek]

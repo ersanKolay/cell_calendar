@@ -20,10 +20,12 @@ class EventLabels extends HookConsumerWidget {
   EventLabels({
     required this.date,
     required this.events,
+    this.style
   });
 
   final DateTime date;
   final List<CalendarEvent> events;
+  TextStyle? style;
 
   List<CalendarEvent> _eventsOnTheDay(
       DateTime date, List<CalendarEvent> events) {
@@ -64,16 +66,14 @@ class EventLabels extends HookConsumerWidget {
       itemCount: eventsOnTheDay.length,
       itemBuilder: (context, index) {
         if (hasEnoughSpace) {
-          return _EventLabel(eventsOnTheDay[index]);
+          return _EventLabel(eventsOnTheDay[index], style);
         } else if (index < maxIndex) {
-          return _EventLabel(eventsOnTheDay[index]);
+          return _EventLabel(eventsOnTheDay[index], style);
         } else if (index == maxIndex) {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              _EventLabel(
-                eventsOnTheDay[index],
-              ),
+              _EventLabel(eventsOnTheDay[index], style),
               Icon(
                 Icons.more_horiz,
                 size: 13,
@@ -90,8 +90,8 @@ class EventLabels extends HookConsumerWidget {
 
 /// label to show [CalendarEvent]
 class _EventLabel extends StatelessWidget {
-  _EventLabel(this.event);
-
+  _EventLabel(this.event, this.style);
+  final TextStyle? style;
   final CalendarEvent event;
 
   @override
@@ -103,7 +103,7 @@ class _EventLabel extends StatelessWidget {
       color: event.eventBackgroundColor,
       child: Text(
         event.eventName,
-        style: event.eventTextStyle,
+        style: style ?? TextStyle(color: Colors.black),
         textAlign: TextAlign.center,
         overflow: TextOverflow.ellipsis,
       ),

@@ -12,7 +12,7 @@ class MonthYearLabel extends HookConsumerWidget {
   final MonthYearBuilder? monthYearLabelBuilder;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context, WidgetRef ref,) {
     final currentDateTime = ref.watch(currentDateProvider);
     final monthLabel = currentDateTime.month.monthName;
     final yearLabel = currentDateTime.year.toString();

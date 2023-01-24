@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 /// Initial index for pageView of calendar
 ///
 /// User can get back to maximum 100 year and 1 month.
@@ -15,19 +17,20 @@ extension DateExtension on int {
 
   /// MonthName for the number of month
   String get monthName {
+   
     final monthNameList = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December"
+      "Ocak",
+      "Şubat",
+      "Mart",
+      "Nisan",
+      "Mayıs",
+      "Haziran",
+      "Temmuz",
+      "Ağustos",
+      "Eylül",
+      "Ekim",
+      "Kasım",
+      "Aralık"
     ];
     return monthNameList[this - 1];
   }
