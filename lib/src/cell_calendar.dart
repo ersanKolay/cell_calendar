@@ -42,7 +42,7 @@ class CellCalendar extends HookConsumerWidget {
 
   final TextStyle? dateTextStyle;
 
-  final List<CalendarEvent> events;
+  final List<KesimhaneIsPlani> events;
   final void Function(DateTime firstDate, DateTime lastDate)? onPageChanged;
   final void Function(DateTime)? onCellTapped;
   final Color todayMarkColor;
@@ -65,6 +65,8 @@ class CellCalendar extends HookConsumerWidget {
     );
   }
 }
+
+
 
 class _CalendarPageView extends HookConsumerWidget {
   const _CalendarPageView({
@@ -91,7 +93,7 @@ class _CalendarPageView extends HookConsumerWidget {
 
   final TextStyle? dateTextStyle;
 
-  final List<CalendarEvent> events;
+  final List<KesimhaneIsPlani> events;
   final void Function(DateTime firstDate, DateTime lastDate)? onPageChanged;
   final void Function(DateTime)? onCellTapped;
   final Color todayMarkColor;
@@ -165,7 +167,7 @@ class _CalendarPage extends StatelessWidget {
   final void Function(DateTime)? onCellTapped;
   final Color todayMarkColor;
   final Color todayTextColor;
-  final List<CalendarEvent> events;
+  final List<KesimhaneIsPlani> events;
 
   List<DateTime> _getCurrentDays(DateTime dateTime) {
     final List<DateTime> result = [];

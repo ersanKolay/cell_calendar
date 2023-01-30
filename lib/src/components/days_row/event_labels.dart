@@ -24,11 +24,11 @@ class EventLabels extends HookConsumerWidget {
   });
 
   final DateTime date;
-  final List<CalendarEvent> events;
+  final List<KesimhaneIsPlani> events;
   TextStyle? style;
 
-  List<CalendarEvent> _eventsOnTheDay(
-      DateTime date, List<CalendarEvent> events) {
+  List<T> _eventsOnTheDay<T extends KesimhaneIsPlani>(
+      DateTime date, List<T> events) {
     final res = events
         .where((event) =>
             event.eventDate.year == date.year &&
@@ -92,7 +92,7 @@ class EventLabels extends HookConsumerWidget {
 class _EventLabel extends StatelessWidget {
   _EventLabel(this.event, this.style);
   final TextStyle? style;
-  final CalendarEvent event;
+  final KesimhaneIsPlani event;
 
   @override
   Widget build(BuildContext context) {

@@ -26,7 +26,7 @@ class DaysRow extends StatelessWidget {
   final void Function(DateTime)? onCellTapped;
   final Color todayMarkColor;
   final Color todayTextColor;
-  final List<CalendarEvent> events;
+  final List<KesimhaneIsPlani> events;
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +68,7 @@ class _DayCell extends HookConsumerWidget {
   final void Function(DateTime)? onCellTapped;
   final Color todayMarkColor;
   final Color todayTextColor;
-  final List<CalendarEvent> events;
+  final List<KesimhaneIsPlani> events;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
