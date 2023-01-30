@@ -14,7 +14,7 @@ class KesimhaneIsPlani {
     required this.modelKodu,
     required this.modelFoto,
     required this.kullanilanKumasKodu,
-    required this.kullaninakKumasIcerigi,
+    required this.kullanilanKumasIcerigi,
     required this.baslangicTarihi,
     this.bitisTarihi,
     required this.kesimAdet,
@@ -32,7 +32,7 @@ class KesimhaneIsPlani {
   final String modelKodu;
   final String modelFoto;
   final String kullanilanKumasKodu;
-  final String kullaninakKumasIcerigi;
+  final String kullanilanKumasIcerigi;
   final DateTime baslangicTarihi;
   final DateTime? bitisTarihi;
   final double kesimAdet;
