@@ -1,14 +1,5 @@
-import 'package:flutter/material.dart';
-
-/// DataModel of event
-///
-/// [eventName] and [eventDate] is essential to show in [CellCalendar]
 class KesimhaneIsPlani {
   KesimhaneIsPlani({
-    required this.eventName,
-    required this.eventDate,
-    this.eventBackgroundColor = Colors.blue,
-    this.eventID,
     required this.planNo,
     required this.kesimhaneAdi,
     required this.modelKodu,
@@ -21,12 +12,10 @@ class KesimhaneIsPlani {
     required this.gramajBilgisi,
     required this.kesilenAdet,
     required this.kullanilanKumasKG,
+    required this.atolyeNot,
+    required this.fabrikaNot,
   });
 
-  final String eventName;
-  final DateTime eventDate;
-  final String? eventID;
-  final Color eventBackgroundColor;
   final int planNo;
   final String kesimhaneAdi;
   final String modelKodu;
@@ -39,4 +28,6 @@ class KesimhaneIsPlani {
   final double gramajBilgisi;
   final double kesilenAdet;
   final double kullanilanKumasKG;
+  final String fabrikaNot;
+  final String atolyeNot;
 }

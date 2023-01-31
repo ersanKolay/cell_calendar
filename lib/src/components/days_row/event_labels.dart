@@ -31,9 +31,9 @@ class EventLabels extends HookConsumerWidget {
       DateTime date, List<T> events) {
     final res = events
         .where((event) =>
-            event.eventDate.year == date.year &&
-            event.eventDate.month == date.month &&
-            event.eventDate.day == date.day)
+            event.baslangicTarihi.year == date.year &&
+            event.baslangicTarihi.month == date.month &&
+            event.baslangicTarihi.day == date.day)
         .toList();
     return res;
   }
@@ -100,9 +100,9 @@ class _EventLabel extends StatelessWidget {
       margin: EdgeInsets.only(right: 4, bottom: 3),
       height: 13,
       width: double.infinity,
-      color: event.eventBackgroundColor,
+      color: event.bitisTarihi == null ? Color.fromARGB(255, 255, 96, 85) :Color.fromARGB(255, 95, 154, 255),
       child: Text(
-        event.eventName,
+        event.modelKodu,
         style: style ?? TextStyle(color: Colors.black),
         textAlign: TextAlign.center,
         overflow: TextOverflow.ellipsis,
